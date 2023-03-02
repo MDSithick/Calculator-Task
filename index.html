@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+   <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:beige;
+            font-family: sans-serif;
+            outline: none;
+        }
+        .parent{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .calculator{
+            background-color:   #98aa9d;
+            padding: 15px;
+            border-radius: 30px;
+            display: grid;
+            grid-template-columns: repeat(4,68px);
+        }
+        input{
+            grid-column: span 4;
+            height: 70px;
+            width: 260px;
+            background-color:  #ffffff;
+            border: none;   
+            border-radius: 30px;
+            color: rgb(70,70,70);
+            font-size: 50px;
+            margin: auto;  
+            margin-top: 40px;
+            margin-bottom: 30px;
+            padding: 20px;             
+
+        }
+        button{
+            height: 48px;
+            width: 48px;
+            background-color:  #B85042;
+            border: none;
+            border-radius: 50%;
+            margin: 8px;
+            font-size: 16px;                  
+        }
+        #equal{
+            width: 115px;
+            border-radius: 40px;
+            background-color:  #E7E8D1;
+            
+        }
+        #title{
+          text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+          color: rgb(1, 152, 84);
+            
+        }
+        #description{
+            text-align: center;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+   <div>
+     <h1 id="title">Calculator</h1>
+     <p id="description">This is a calculator by using DOM</p>
+   </div>
+    <div class="parent">
+        
+        <div class="calculator">
+
+            <input type="text" placeholder="0" id="result" class="screen">
+            <button id="clear" onclick="Clear('C')">C</button>
+            <button onclick="del('D')">D</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button id="7" onclick="display('7')">7</button>
+            <button id="8" onclick="display('8')">8</button>
+            <button id="9" onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button id="4" onclick="display('4')">4</button>
+            <button id="5" onclick="display('5')">5</button>
+            <button id="6" onclick="display('6')">6</button>
+            <button id="subtract" onclick="display('-')">-</button>
+            <button id="1" onclick="display('1')">1</button>
+            <button id="2" onclick="display('2')">2</button>
+            <button id="3" onclick="display('3')">3</button>
+            <button id="add" onclick="display('+')">+</button>
+            <button onclick="display('.')">.</button>
+            <button id="0" onclick="display('0')">0</button>
+            <button onclick="calculate()" id="equal">=</button>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+   <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
